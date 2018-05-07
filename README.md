@@ -50,3 +50,6 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 <link rel="stylesheet" type="text/css" href="{% static 'css/h-ui/css/H-ui.min.css' %}" />
 ```
 
+# 运行结果
+
+![](https://github.com/liuluyeah/admin/blob/master/QQ%E5%9B%BE%E7%89%8720180503160841.png)
