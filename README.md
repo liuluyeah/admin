@@ -7,7 +7,7 @@ django+mongodb+hui 实现的后台管理系统
 
 下载后将admin改名为myadmin, 并将static压缩文件解压到当前文件夹下
 
-# mongodb 基本操作
+# mongodb 命令行下基本操作
 
 连接远程mongodb: mongo ip地址：端口号
 
@@ -18,6 +18,37 @@ django+mongodb+hui 实现的后台管理系统
 查看数据表： show collections;
 
 删除goods表中address字段: db.goods.update({},{$unset:{'address':''}},false, true)
+
+# mongodb 在django项目view.py常用操作
+
+修改数据
+``` python
+def geditsubmit(request):
+    gid = request.POST.get('gid')
+    gname = request.POST.get('gname')
+    gprice = request.POST.get('gprice')
+    gsummary = request.POST.get('gsummary')
+    Goods.objects(id=gid).update(gname=gname)
+    Goods.objects(id=gid).update(gprice=gprice)
+    Goods.objects(id=gid).update(gsummary=gsummary)
+    return redirect('/product')
+```
+删除数据
+``` python
+def del_classes(request):
+    nid = request.GET.get('nid')
+    Goods.objects.filter(id=nid).first().delete()
+    return redirect('/product')
+```
+查找数据
+``` python
+def index(request):
+    goods = Goods.objects
+    context = {
+        'GoodsInfo':goods
+    }
+    return render(request, 'product-list.html', context) # 传递context参数,参数必须是字典形式传递到前端
+```
 
 # django 踩坑记录
 
