@@ -1,4 +1,8 @@
-# admin
+# 声明
+
+本软件仅供学习交流，如作他用所承受的法律责任一概与作者无关（下载使用即代表你同意上述观点）
+
+# 商品后台管理系统
 django+mongodb+hui 实现的后台管理系统
 
 运行环境：windows10 + pytcharm + anaconda3 
