@@ -89,3 +89,5 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ![](https://github.com/liuluyeah/admin/blob/master/result/%E7%99%BB%E5%BD%95.png)
 
 ![](https://github.com/liuluyeah/admin/blob/master/QQ%E5%9B%BE%E7%89%8720180503160841.png)
+
+![](https://github.com/liuluyeah/admin/blob/master/result/%E5%9B%BE.png)
