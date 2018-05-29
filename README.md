@@ -53,7 +53,24 @@ def index(request):
     }
     return render(request, 'product-list.html', context) # 传递context参数,参数必须是字典形式传递到前端
 ```
-
+过滤数据
+``` python
+Users.objects(age__lte=18)
+'''
+    ne - 不相等
+    lt - 小于
+    lte - 小于等于
+    gt - 大于
+    gte - 大于等于
+    not - 取反
+    in - 值在列表中
+    nin - 值不在列表中
+    mod - 取模
+    all - 与列表的值相同
+    size - 数组的大小
+    exists - 字段的值存在
+'''
+```
 # django 踩坑记录
 
 页面样式，js文件经常出现路径不对，找不到页面中的样式文件，解决办法：
