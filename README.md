@@ -23,6 +23,11 @@ django+mongodb+hui 实现的后台管理系统
 
 删除goods表中address字段: db.goods.update({},{$unset:{'address':''}},false, true)
 
+# mongodb 的可视化工具 Robo 3T 中命令的使用
+日期查询语句
+```
+db.getCollection('goods').find({"deleted_date":{$gte:ISODate("2018-01-16T21:00:00.000Z")}})
+```
 # mongodb 在django项目view.py常用操作
 
 修改数据
